@@ -28,6 +28,7 @@
     "Application.OperatorsAndNumbers2.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "main",
+    "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/Users/Awet Mohammed/Development_093024/RTT-116-AwetMohammed",
     "node.js.detected.package.eslint": "true",
@@ -76,6 +77,8 @@
       <updated>1728249582229</updated>
       <workItem from="1728249583345" duration="1404000" />
       <workItem from="1728482526541" duration="3863000" />
+      <workItem from="1728486763798" duration="368000" />
+      <workItem from="1728487145270" duration="66000" />
     </task>
     <servers />
   </component>
