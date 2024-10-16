@@ -11,6 +11,7 @@ public class OperatorsAndNumbers2 {
         int z = x & y;
         System.out.println("Integer.toBinaryString(7) = " + Integer.toBinaryString(x));
         System.out.println("Integer.toBinaryString(17) = " + Integer.toBinaryString(y));
+        System.out.println("Integer.toBinaryString(32)" + Integer.toBinaryString(32));
         System.out.println("Integer.toBinaryString(7 & 17) = " + Integer.toBinaryString(z));
         System.out.println("Decimal value of 7 & 17 = " + z);
 
