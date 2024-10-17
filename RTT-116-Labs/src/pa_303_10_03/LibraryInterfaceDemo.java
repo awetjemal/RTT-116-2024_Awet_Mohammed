@@ -13,7 +13,7 @@ public class LibraryInterfaceDemo {
         kid.requestBook();
 
         System.out.println("\n");
-        
+
         AdultUser adult = new AdultUser();
         adult.setAge(5);
         adult.registerAccount();
