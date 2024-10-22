@@ -4,29 +4,12 @@ import java.util.*;
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String[] args) {
-        Integer arr[] = {10, 2, 3, 99, 12, 0};
-        String s = "Bread$$##12.5$$##10";
-        String[] sArr = s.split("\\$\\$\\#\\#");
-        System.out.println(Arrays.asList(sArr));
-        int sum = 0;
-        System.out.println("The subarrays & their sum are-");
+        String[] sArr = {"aab", "acc", "bcc", "bdd"};
+        List<String> list = new ArrayList<>(Arrays.asList(sArr));
+        System.out.println(list);
+        List<String> list2 = list.stream().filter(e -> e.startsWith("b")).toList();
+        System.out.println(list2);
 
-        // For loop for start index
-        for (int i = 0; i < arr.length; i++)
-
-            // For loop for end index
-            for (int j = i; j < arr.length; j++) {
-
-                // For loop to print subarray elements
-                for (int k = i; k <= j; k++){
-                    System.out.print(arr[k] + " ");
-                    sum += arr[k];
-                }
-                System.out.print(" => " + sum);
-                sum = 0;
-                System.out.println("");
-            }
-        System.out.println("number of sub arrays their sum equats to 111:  " + countNumberOfSubarrays(Arrays.asList(arr), 111));
     }//end of main method
         public static long countNumberOfSubarrays (List < Integer > arr,int k){
             // Write your code here
