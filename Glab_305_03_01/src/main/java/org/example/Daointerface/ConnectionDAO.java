@@ -17,7 +17,7 @@ public class ConnectionDAO  {
         final String DBUSERNAME = "root";
         final String  DBPASSWORD = "PerScholas102424";
         try {
-            Class.forName("com.mysql.jdbc.Driver");
+            //Class.forName("com.mysql.jdbc.Driver");
             con = DriverManager.getConnection(DBURL, DBUSERNAME, DBPASSWORD);
             System.out.println("Connected Database Successfully");
         }
