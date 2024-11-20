@@ -9,7 +9,24 @@ import org.junit.jupiter.api.Test;
 public class CustomerDAOTest {
     private CustomerDAO customerDAO = new CustomerDAO();
     private EmployeeDAO employeeDAO = new EmployeeDAO();
+/*
+    @ParameterizedTest
+    @CsvSource({
+            "103, Atelier graphique",
+            "112, Signal Gift Stores",
+            "114, 'Australian Collectors, Co.'"
+    })
+    public void findByIdTest() {
+        // given
+        int givenCustomerId = 125;
 
+        // when
+        Customer actual = customerDAO.findCustomerById(givenCustomerId);
+
+        // then
+        Assertions.assertEquals("Havel & Zbyszek Co", actual.getCustomerName());
+    }
+ */
     @Test
     public void findCustomerByIdTest() {
         // given
@@ -65,6 +82,7 @@ public class CustomerDAOTest {
 
 
     }
+
 
 
 }
