@@ -1,0 +1,91 @@
+body{
+  background-color: rgb(213, 218, 221);
+}
+ nav ul {
+  display: flex;
+  list-style-type: none;
+  text-align: left;
+  margin: 15px;
+  margin-left: 5px;
+  font-size: 1.5em;
+  background-color:#897;
+}
+nav li {
+  display: inline;
+}
+nav a {
+  text-decoration: none;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+header{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 15vh;
+  background-color: rgb(44, 70, 70);
+  margin: 10px;
+}
+.first-section {
+ display: flex;
+ justify-content: space-between;
+ margin-left: 15px;
+ margin-right: 15px;
+}
+.horizontal-line{
+  margin-left: 15px;
+  margin-right: 15px;
+}
+.first-section div > div{
+  border: 2px solid rgb(96, 101, 104);
+  display: flex;
+  margin: 10px;
+  padding: 0px;
+  justify-content: center;
+  /* align-items: center; */
+}
+/* .first-section h2{
+  border: 1px solid rgb(96, 101, 104);
+  display: inline;
+  justify-content: center;
+} */
+.eclipse{
+  width: 17vw;
+  height: 7vh;
+  background-color: rgb(128, 148, 148);
+  border: 3px solid rgb(44, 70, 70);
+  border-radius: 50%;
+}
+.crossed {
+  background: 
+      linear-gradient(to top left,
+          rgba(0,0,0,0) 0%,
+          rgba(0,0,0,0) calc(50% - 1.8px),
+          rgba(0,0,0,1) 50%,
+          rgba(0,0,0,0) calc(50% + 1.8px),
+          rgba(0,0,0,0) 100%),
+      linear-gradient(to top right,
+          rgba(0,0,0,0) 0%,
+          rgba(0,0,0,0) calc(50% - 1.8px),
+          rgba(0,0,0,1) 50%,
+          rgba(0,0,0,0) calc(50% + 1.8px),
+          rgba(0,0,0,0) 100%);
+}
+.box{
+  width: 54vw;
+  height: 18vh;
+  border: 2px solid rgb(44, 70, 70);
+}
+.second-section{
+  display: flex;
+  justify-content: space-between;
+  margin: 35px;
+
+}
+.second-section div{
+  margin-left: 15px;
+  margin-right: 15px;
+  padding-left: 25px;
+  padding-right: 25px;
+}
