@@ -1,0 +1,76 @@
+body{
+  /* background-color: rgb(250, 247, 242); */
+  display: flex;
+  color: #5e5f5f;
+  justify-content: center;
+}
+.container{
+  display: flex;
+  flex-direction: column;
+}
+form{
+  /* display: flex; */
+  flex-direction: column;
+  padding: 20px;
+  font-size: 1.10em;
+  border: 2px solid rgb(191, 191, 207);
+  justify-content: center;
+  align-content: center;
+  width: 350px;
+}
+ input{
+  padding: 10px;
+  border: 1px solid #dee9e9;
+  border-radius: 5%;
+}
+form div{
+  display: flex;
+  /* border: 1px solid ; */
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
+.email{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+.email span{
+  display: flex;
+  justify-self: start ;
+  /* flex: none; */
+  /* background-color: #5e5f5f; */
+}
+ button{
+  background-color: royalblue;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5%;
+  font-size: large;
+  cursor: pointer;
+}
+.link{
+  display: flex;
+  justify-content: flex-start;
+}
+table, tbody{
+  border: 1px solid ;
+}
+td{
+  /* border: 1px solid; */
+  padding: 0px;
+  margin: 0px;
+}
+tbody, tr{
+  border: 1px solid;
+  margin: 0px;
+  padding: 0px;
+}
+.user-icon{
+  width: 25px;
+}
+.icon-div{
+  display: flex;
+  flex-direction:column ;
+}
