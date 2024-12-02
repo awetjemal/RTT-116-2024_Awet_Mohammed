@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Upper Triangle</title>
+</head>
+<body>
+  
+  <script>
+    /*
+    Task E. Upper triangle
+Write a program upper.html that prints the top-right half of a square, given the side length.
+Example:
+Input side length: 5
+Shape:
+*****
+ ****
+  ***
+   **
+    *
+
+    */ 
+    let s = "";
+    const l = 6;
+    for(let i = l; i > 0; i--){
+      for(let k = 0; k < (l - i); k++){
+        s = s + " ";
+      }
+      for(let j = 0; j < i; j++){
+        s = s + "*";
+      }
+      s = s + "\n";
+    }
+    console.log(s);
+  </script>
+</body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Print Cross Shape</title>
+</head>
+<body>
+  <script>
+    /*Task C. Cross
+Write a program cross.html that asks the user to input the shape size, and print a diagonal cross of that dimension.
+Example:
+Input size: 8
+
+Shape:
+*      *
+ *    *
+  *  *
+   **
+   **
+  *  *
+ *    *
+*      *
+*/
+    const size = 8;
+    
+    let s = "";
+    
+    let gap = size - 2;
+    for(let i = 0; i < size; i++){
+        for(let k = 0; k < i; k++ ){
+          s = s + " "
+        }
+        s = s + "*";
+        for(let k = 0; k < gap; k++){
+          s = s + " ";
+        }
+        s = s + "*";
+        
+      
+      s = s + ("\n");
+      gap = gap - 2;
+    }
+    console.log(s);
+    // print diagonal from top-left to bottom-right
+      s = "";
+      for(let k = 0; k < size; k++){
+        for(let j = 0; j < k; j++){
+        s= s + " ";
+      }
+      s = s + "*";
+      s = s + "\n";
+      }
+      
+    console.log("diagonal from top-left to bottom-right");
+    console.log(s);
+
+    // print a diagonal line from top-right to bottom-left
+    s = "";
+    for(let i = size; i > 0; i--){
+      for(let k = 0; k < i; k++ ){
+        s = s + " ";
+
+      }
+      s = s + "*";
+      s = s + "\n";
+    }
+    console.log("Diagonal top-right to bottom-left");
+    console.log(s);
+  </script>
+</body>
+</html>

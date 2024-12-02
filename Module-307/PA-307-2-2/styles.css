@@ -36,8 +36,7 @@ form div{
   justify-content: flex-start;
 }
 .email span{
-  display: flex;
-  justify-self: start ;
+  float: left;
   /* flex: none; */
   /* background-color: #5e5f5f; */
 }
