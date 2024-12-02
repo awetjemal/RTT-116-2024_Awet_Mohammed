@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Printing Shapes</title>
+</head>
+<body>
+  <script>
+    /*
+    Task B. Checkerboard
+Write a program checkerboard.html that asks the user to input width and height, and prints a rectangular checkerboard of the requested size using asterisks and spaces (alternating).
+Example:
+Input width: 11
+Input height: 6
+
+Shape:
+* * * * * *
+ * * * * * 
+* * * * * *
+ * * * * *
+* * * * * *
+ * * * * *
+
+    */
+    const h = 6;
+    const w = 11;
+    let s = "";
+    let next = "*"
+    for(let i = 0; i < h; i++){
+      for(let j = 0; j < w; j++){
+        s = s + next;
+        if(next === "*")
+          next = " ";
+        else
+          next = "*";
+      }
+      s = s + ("\n");
+    }
+    console.log(s);
+  </script>
+</body>
+</html>

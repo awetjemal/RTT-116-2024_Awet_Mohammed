@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lower Triangle</title>
+</head>
+<body>
+  
+  <script>
+    /*
+    Task D. Lower triangle
+Write a program lower.html that prints the bottom-left half of a square, given the side length.
+Example:
+Input side length: 6
+
+Shape:
+*
+**
+***
+****
+*****
+******
+
+    */
+
+    let s = "";
+    const l = 6;
+    for(let i = 0; i < l; i++){
+      for(let j = 0; j <= i; j++){
+        s = s + "*";
+      }
+      s = s + "\n";
+    }
+    console.log(s);
+  </script>
+</body>
+</html>

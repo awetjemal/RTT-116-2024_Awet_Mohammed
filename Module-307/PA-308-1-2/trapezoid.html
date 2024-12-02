@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Upside-down Trapezoid</title>
+</head>
+<body>
+  
+  <script>
+    /*
+    Task F. Upside-down trapezoid
+
+Write a program trapezoid.html that prints an upside-down trapezoid of the given width and height.
+
+However, if the input height is impossibly large for the given width, then the program should report “Impossible shape!”
+Example 1:
+Input width: 12
+Input height: 5
+
+Shape:
+************
+ **********
+  ********
+   ******
+    ****
+Example 2:
+Input width: 12
+Input height: 7
+Impossible shape!
+
+
+Hint:
+You can start with the number of:
+spaces = 0;
+stars = width;
+
+
+On each line, print that number of spaces followed by that number of stars. After that, the number of spaces gets incremented by 1, while the number of stars gets decremented by 2:
+spaces += 1;
+stars -= 2;
+
+*/ 
+const width = 22;
+const height = 10;
+let s = "";
+let spaces = 0;
+let stars = width;
+for(let i = 0; i < height; i++){
+  for(let j = 0; j < spaces; j++){
+    s += " ";
+  }
+  for(let k = 0; k < stars; k++){
+    s += "*";
+  }
+  s += "\n";
+  spaces += 1;
+  stars -= 2;
+}
+console.log(s);
+  </script>
+</body>
+</html>
