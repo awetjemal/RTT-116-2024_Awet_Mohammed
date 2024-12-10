@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JS Events</title>
+</head>
+<body>
+
+<label for="input1">Enter something here</label>
+<input type="text" id="input1" onfocus="focusEvent()" />
+<script>
+  function focusEvent() {
+    document.getElementById("input1").style.background = "aqua";
+  }
+</script>
+  
+<p class="c" onmouseover="mouseOverEvent()">Keep cursor over me</p>
+<script  type="text/Javascript">
+  function mouseOverEvent() {
+    const p = document.querySelector('.c');
+    // console.log(p);
+    if(p.style.color != 'red'){
+      p.style.color = 'red';
+      p.style.fontSize = '1.5em';
+    }else{
+      p.style.color = 'blue';
+      p.style.fontSize = '1.75em';
+    }
+    // const a = new Date(2021, 0, 24, 10, 10, 10, 10);
+    // console.log(a);
+    // console.log(a.getDay());
+    const b = "10/11/2009".split('/');
+    b.reverse();
+    const d = new Date(b[0], b[2]-1 , b[1], 10, 10, 10, 10);
+    console.log(d);
+    const days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+    dayName = days[d.getDay()];
+    console.log(dayName);
+    console.log(b);
+    // alert("This is Perscholas and you are Learners");
+  }
+  // Test the keyCode, key, and code properties
+  // document.addEventListener('keydown', function(event) {
+  //        console.log('key: ' + event.key);
+  //        console.log('code: ' + event.code);
+  //        console.log('keyCode: ' + event.keyCode);
+  //      });
+
+</script>
+<div style="text-align: center; width: 480px">
+  <p>Press A, W, D or S<br>for Up, Left, Right, or Down</p>
+  <button id='KeyW' style="margin-bottom: 5px"> UP </button><br>
+  <button id='KeyA'>LEFT</button>
+  <button id='KeyD'>RIGHT</button><br>
+  <button id='KeyS' style="margin-top: 5px">DOWN</button>
+</div>
+<script>
+  document.addEventListener('keydown',  function(event) {
+    if (document.getElementById(event.code))
+      changeToCoral(document.getElementById(event.code));
+  });
+  document.addEventListener('keyup',  function(event) {
+    if (document.getElementById(event.code))
+      inherit(document.getElementById(event.code));
+  });
+  function changeToCoral(eventTarget) { eventTarget.style.backgroundColor = 'coral'; }
+  function inherit(eventTarget) { eventTarget.style.backgroundColor = 'inherit'; }
+</script>
+
+
+</body>
+</html>

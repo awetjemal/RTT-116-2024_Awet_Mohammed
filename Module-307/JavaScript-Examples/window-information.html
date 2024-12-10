@@ -1,0 +1,60 @@
+<html> 
+  <head> </head> 
+  <body> 
+   <h3>Information about the Window</h3>
+   <table border="2"> 
+        <tr> 
+            <th>outerWidth:</th> <td id="ow"></td>
+            <th>outerHeight:</th> <td id="oh"> 
+        </tr> 
+        <tr> 
+            <th>innerWidth:</th> <td id="iw"></td>
+            <th>innerHeight:</th> <td id="ih"></td> 
+        </tr>
+   </table> 
+   <p>Click the buttons below</p>
+  <button type="button" onclick="newWindow()">Open New Window</button>
+  <button type="button" onclick="closeWindow()"> Close Window!</button><br><br>
+  
+<a href="https://developer.mozilla.org/en-US/">MDN</a>
+<a href="https://www.hackerrank.com/products/main/">HackerRank</a>
+<a href="https://docs.emmet.io/cheat-sheet/">Emmet</a>
+<button id="back">back</button>
+<button id="forward">forward</button>
+<button>Go</button>
+<script>
+  const buttons = document.querySelectorAll("button");
+  buttons.forEach((function (e){
+      e.onclick = handleButtonPress;
+  }))
+  function handleButtonPress(e) {
+      if (e.target.id === "back") {
+          window.history.back();
+      } else if (e.target.id === "forward") {
+          window.history.forward();
+      } else {
+          window.history.go(-1);
+      }
+  }
+</script>
+
+  <script>
+    var myWindow;
+    function newWindow() {
+      myWindow = window.open("https://perscholas.org/","perscholas", "width=400, height=800, resizable=yes, scrollbars=yes, location=yes");
+       myWindow.focus();
+    }
+    function closeWindow(){
+      myWindow.close();
+    }
+
+    // const name = window.prompt("What is your name?");
+      // window.open();
+      document.getElementsByTagName('h3')[0].innerText = name;
+      document.getElementById("ow").innerHTML = window.outerWidth; 
+      document.getElementById("oh").innerHTML = window.outerHeight; 
+      document.getElementById("iw").innerHTML = window.innerWidth; 
+      document.getElementById("ih").innerHTML = window.innerHeight; 
+   </script> 
+ </body> 
+</html>

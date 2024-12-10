@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h1 id="header">This is a header</h1>
+  <p id="para">This is a paragraph with some text</p>
+  First Name1 <input id="firstname1" name="firstname" type="text"><br>
+  First Name2 <input id="firstname2" name="firstname" type="text">
+  <p class = "cssclass">this is second paragraph</p>
+  <span class="cssclass"> this is span</span>
+  
+  <script>
+    let h = document.getElementById("header");
+    console.log(h);
+
+    let p = document.getElementById("para");
+    console.log(p);
+
+    let i = document.getElementsByName("firstname");
+    console.log(i);
+
+    let ps = document.getElementsByTagName("p");
+    console.log(ps[1].innerText);
+
+    let c = document.getElementsByClassName("cssclass");
+    c = document.URL;
+
+    console.log(c);
+
+  </script>
+</body>
+</html>

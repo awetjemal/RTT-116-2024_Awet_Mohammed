@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JQuery Form </title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js">
+
+  </script>
+
+</head>
+<body>
+  <h1>Jquery form validation</h1>
+  <form action="" onsubmit="return submitFunction(event)">
+    <span id = "fns">First name </span> <input type="text" id="firstname" placeholder="hello and welcome"><br>
+    <button type="submit">Submit</button>
+  </form>
+</body>
+<script>
+  function submitFunction(e){
+    // e.preventDefault();
+    // console.log("submit clicked");
+    // console.log(e);
+    let fn = $("#firstname").val();
+    if(fn == ""){
+      $("#firstname").css("border-color","red");
+      $("#fns").css("color","red")
+      console.log("Fist name is required!!");
+    }else{
+      $("#firstname").css("border-color","black");
+      $("#fns").css("color","black");
+      console.log("first name is " + fn);
+    }
+    
+   e.preventDefault();
+  }
+  $("#firstname").on('focus', function () {
+    $("#firstname").css('background-color', '#9978')
+  });
+  $("#firstname").on('blur', function () {
+    $("#firstname").css('background-color', '#7988')
+  });
+</script>
+</html>

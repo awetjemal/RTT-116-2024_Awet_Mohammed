@@ -1,0 +1,42 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>jquery events</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+<body>
+
+  <h1 id="h1"> Form validation with JQuery</h1>
+
+  <button id="b1">Button 1</button>
+  <button id="b2">Button 2</button>
+
+</body>
+<script>
+  $("#b1").click(function () {
+   console.log("The button 1 was clicked");
+   document.getElementById("h1").style.backgroundColor = 'white';
+  });
+  $('#h1').on('mouseenter', function (e){
+    e.currentTarget.style.backgroundColor = 'yellow';
+  });
+  $('#h1').on('mouseout', function (e){
+    e.currentTarget.style.backgroundColor = 'green';
+    
+  });
+  $("#b2").click(function () {
+   console.log("The button 2 was clicked");
+   $('#b2').css('background-color', 'red');
+  // document.getElementById("h1").style.backgroundColor = 'blue';
+  });
+
+  //using raw javascript first we have to find the element
+  let b = document.getElementById("b1");
+  b.addEventListener("click", function (e){
+    console.log(e.currentTarget );
+  })
+</script>
+</html>
