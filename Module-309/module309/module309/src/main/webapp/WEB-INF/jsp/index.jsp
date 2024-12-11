@@ -1,3 +1,4 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%--
   Created by IntelliJ IDEA.
   User: Awet_Mohammed
@@ -18,8 +19,31 @@
 
 <body>
 <h1>First Page</h1>
-<h1>Second Page</h1>
-<h1>Third Page</h1>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+response.addObject("names", firstNames);
+<table border="1">
+  <tr>
+    <td>Contact First Name</td>
+    <td>Contact Last Name</td>
+    <td>id</td>
+    <td>Customer Name</td>
+  </tr>
+
+  <c:forEach var="name" items="${names}">
+    <tr>
+      <td>${name.contactFirstname}</td>
+      <td>${name.contactLastname}</td>
+      <td>${name.id}</td>
+      <td>${name.customerName}</td>
+    </tr>
+  </c:forEach>
+</table>
+  <c:forEach var="anything" begin="1" end="5">
+    Item: <c:out value="${anything}"/><p>
+  </c:forEach>
+<c:forEach var="name" items="names">
+
+    </c:forEach>
 
 </body>
 
