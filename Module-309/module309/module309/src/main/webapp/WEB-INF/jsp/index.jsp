@@ -18,6 +18,8 @@
 
 <body>
 <h1>First Page</h1>
+<h1>Second Page</h1>
+<h1>Third Page</h1>
 
 </body>
 
