@@ -7,9 +7,10 @@
 <meta name="description" content="Path of Light Yoga Studio, a yoga practice center,
  that offer classes on Hatha, Vinyasa, and Restorative Yoga.">
 <link rel="stylesheet" href="yoga.css">
+
 </head>
 
-<body>
+<body id="body">
 <nav>
 		 <ul>
 				<li> <a href="index.html">Home</a> </li>
@@ -18,7 +19,7 @@
 				<li> <a href="contact.html">Contact</a> </li>
          </ul> 
 </nav>
-<header class= "home">
+<header id="header" class= "home">
 <h1 ><a href="index.html">Path of Light Yoga Studio</a></h1>
 </header>
 
@@ -30,17 +31,26 @@
       whether you are new to yoga or an experienced practitioner, our dedicated instructors can develop
     a practice to meet your needs. Let your inner light shine at the Path of Light Yoga Studio.
     </p>
-    <ul>
-        <li>Hatha, Vinyasa, and Restorative Yoga classes.</li>
-        <li>Drop-ins welcome</li>
-          <li>Mats, blocks, and blankets provided</li>
-          <li>Relax in our Serenity Lounge before or after your class</li>
-    </ul>
-<div>
-        612 Serenity Way<br>
-        El Dorado, AZ 86336<br>
-        888-555-5555<br>
-<br>        
+    
+
+<div id="js1">
+  Choose list to be displayed: 
+  <select id="list-types" onchange="listSelected()">
+    <option value=""></option>
+    <option value="colors">Colors</option>
+    <option value="continents">Continents</option>
+    <option value="animals">Animals</option>
+  </select>
+  <ul id="list-items">
+  </ul>
+   <p>Please select a theme color:</p>
+    <input type="radio" id="html" name="fav_col" value="RED">
+    <label for="html">Red</label><br>
+    <input type="radio" id="css" name="fav_col" value="GREEN">
+    <label for="css">Green</label><br>
+    <input type="radio" id="javascript" name="fav_col" value="BLUE">
+    <label for="javascript">Blue</label> 
+  
 </div>
 </main>
 <footer>
@@ -50,5 +60,6 @@
 
 
 </div>
+<script src="script.js"></script>
 </body>
 </html>
