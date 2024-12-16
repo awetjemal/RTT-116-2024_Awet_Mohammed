@@ -41,6 +41,7 @@ public class Customer {
     @Column(name = "contact_lastname")
     private String contactLastname;
 
+    @Getter
     @Column(name = "contact_firstname")
     private String contactFirstname;
 
@@ -64,8 +65,6 @@ public class Customer {
 
     @Column(name = "country")
     private String country;
-
-
 
     @Column(name = "credit_limit", columnDefinition = "DECIMAL")
     private Double creditLimit;
