@@ -7,7 +7,10 @@ import org.springframework.data.jpa.repository.Query;
 
 import java.util.List;
 
-public interface EmployeeDAO extends JpaRepository<Employee, Integer> {
+public interface EmployeeDAO extends JpaRepository<Employee, Long> {
     @Query("select  e from Employee e where e.id = :id")
     public Employee getEmployeeById(Integer id);
+
+    @Query(value = "select * from employees order by lastname asc;", nativeQuery = true)
+    public List<Employee> findAllEmployees();
 }

@@ -10,5 +10,7 @@ public interface CustomerDAO extends JpaRepository<Customer, Long>{
     @Query("select  c from Customer c where c.contactFirstname = :firstName")
     public List<Customer> findByFirstName(String firstName);
 
+    Customer findById(Integer id);
 
+    List<Customer> findByContactLastname(String lastName);
 }
