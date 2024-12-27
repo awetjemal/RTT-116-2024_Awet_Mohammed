@@ -1,4 +1,4 @@
-package com.example.Glab309_5_1;
+package com.example.Glab._951;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
