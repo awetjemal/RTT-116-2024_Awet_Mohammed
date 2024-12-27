@@ -1,13 +1,17 @@
 package com.example.module309.config;
 
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.security.authentication.AuthenticationManager;
+import org.springframework.security.config.annotation.authentication.configuration.AuthenticationConfiguration;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.web.SecurityFilterChain;
 import org.springframework.security.web.util.matcher.AntPathRequestMatcher;
 
+@Slf4j
 @Configuration
 public class SecurityConfig {
 
@@ -34,6 +38,8 @@ public class SecurityConfig {
                 // spring security has this controller method created for us already .. and we are just configuring the URL where it submits to
                 .loginProcessingUrl("/login/loginSubmit"));
 
+
+
         // this section is for configuing logout
         http.logout(formLogout -> formLogout
                 // when the user logs out ... destroy the session the server side
@@ -52,6 +58,10 @@ public class SecurityConfig {
     @Bean(name = "passwordEncoder")
     public PasswordEncoder getPasswordEncoder() {
         return new BCryptPasswordEncoder();
+    }
+    @Bean
+    public AuthenticationManager authenticationManager(AuthenticationConfiguration authConfig) throws Exception {
+        return authConfig.getAuthenticationManager();
     }
 
 }
