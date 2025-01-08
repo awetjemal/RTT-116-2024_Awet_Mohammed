@@ -13,10 +13,12 @@ public class TennisCoach implements Coach {
     public TennisCoach() {
         // this is default constructor
     }
+    
     @Autowired
     public TennisCoach(@Qualifier("databaseFortuneService") FortuneServices theFortuneService) {
         fortuneService = theFortuneService;
     }
+
     @Override
     public String getDailyWorkout() {
         return "Practice your backhand volley";
