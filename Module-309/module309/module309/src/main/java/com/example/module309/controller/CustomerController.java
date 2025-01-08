@@ -35,6 +35,13 @@ public class CustomerController {
     @Autowired
     private EmployeeDAO employeeDAO;
 
+    @GetMapping("/customer/ajaxExample")
+    public ModelAndView ajaxExample() {
+        ModelAndView modelAndView = new ModelAndView("ajaxExample");
+            modelAndView.setViewName("customer/ajaxExample");
+        return modelAndView;
+    }
+
     @GetMapping("/customer/search")
     public ModelAndView search(@RequestParam(required = false) String firstName) {
 //        int x = 10/ 0;

@@ -43,8 +43,12 @@
                         <a class="nav-link" href="/customer/create">Customer Create</a>
                     </li>
                     <li class="nav-item">
+                        <a class="nav-link" href="/customer/ajaxExample">Ajax Example</a>
+                    </li>
+                    <li class="nav-item">
                         <a class="nav-link" href="/employee/search">Employee Search</a>
                     </li>
+
                 </ul>
             </div>
         </div>

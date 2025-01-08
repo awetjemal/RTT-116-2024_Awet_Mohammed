@@ -13,7 +13,7 @@ public class TennisCoach implements Coach {
     public TennisCoach() {
         // this is default constructor
     }
-    
+
     @Autowired
     public TennisCoach(@Qualifier("databaseFortuneService") FortuneServices theFortuneService) {
         fortuneService = theFortuneService;
