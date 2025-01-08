@@ -69,4 +69,7 @@ public class Customer {
     @Column(name = "credit_limit", columnDefinition = "DECIMAL")
     private Double creditLimit;
 
+    @Column(name = "image_url")
+    private String imageUrl;
+
 }
