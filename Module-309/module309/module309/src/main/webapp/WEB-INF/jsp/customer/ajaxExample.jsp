@@ -12,9 +12,11 @@
 <section class="bg-light1 pt-5 pb-5">
     <div class="container">
         <div class="row">
-            <h1>AJAX EXAMPLE</h1>
+            <h1 class="m-8 text-center">AJAX EXAMPLE</h1>
         </div>
     </div>
 </section>
+
+
 
 <jsp:include page="../include/footer.jsp"/>
